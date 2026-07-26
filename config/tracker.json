@@ -1,0 +1,74 @@
+{
+  "enabled": true,
+  "platform": {
+    "static_vehicle": true
+  },
+  "detection": {
+    "udp_port": 11000,
+    "buffer_size": 64,
+    "wait_ms": 150,
+    "stale_s": 0.30,
+    "minimum_confidence": 0.5,
+    "trigger_wait_timeout_s": 0.5,
+    "target_class_id": 0
+  },
+  "runtime": {
+    "frame_queue_size": 2,
+    "maximum_frame_gap_s": 0.5
+  },
+  "candidate": {
+    "minimum_range_m": 1.0,
+    "maximum_range_m": 70.0,
+    "minimum_height_m": 3.0,
+    "cluster_tolerance_m": 0.5,
+    "cluster_min_points": 1,
+    "motion_expansion_sigma": 1.0,
+    "motion_gate_threshold": 11.345,
+    "visual_baseline": 0.05,
+    "visual_sigma": 0.8,
+    "visual_association_bbox_scale_x": 1.6,
+    "visual_association_bbox_scale_y": 2.0
+  },
+  "imm": {
+    "q_cv": 5.0,
+    "q_ca": 3.0,
+    "q_acceleration": 0.0005,
+    "cv_acceleration_retention": 0.0,
+    "transition_stay_probability": 0.95,
+    "initial_cv_probability": 0.9,
+    "initial_position_variance": 4.0,
+    "initial_velocity_variance": 25.0,
+    "initial_acceleration_variance": 25.0
+  },
+  "pdaf": {
+    "measurement_variance": 2.0,
+    "association_epsilon": 0.01,
+    "empty_weight": 0.001
+  },
+  "lifecycle": {
+    "birth_confidence": 0.32,
+    "hit_beta_empty_threshold": 0.6,
+    "tentative_visual_association_ratio": 0.45,
+    "hits_to_confirm": 2,
+    "tentative_misses_to_delete": 5,
+    "confirmed_misses_to_lost": 10,
+    "lost_misses_to_delete": 50,
+    "lost_covariance_inflation": 1.04
+  },
+  "control": {
+    "visual_servo_gain": 1.0,
+    "servo_response_delay_s": 0.10,
+    "maximum_prediction_horizon_s": 0.50,
+    "tracking_stale_s": 0.30,
+    "lost_hold_s": 2.0,
+    "min_encoder_yaw": 0,
+    "max_encoder_yaw": 4100,
+    "min_encoder_pitch": 1800,
+    "max_encoder_pitch": 3000,
+    "max_encoder_rate": 800.0,
+    "home_encoder_yaw": 2048,
+    "home_encoder_pitch": 2000,
+    "servo_command_time_ms": 10,
+    "home_move_time_ms": 500
+  }
+}

@@ -1,0 +1,85 @@
+# 忽略CMake构建目录
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+install_manifest.txt
+Makefile
+python/data/*
+python/runs/*
+ros_ws/build
+ros_ws/devel
+
+# 编译生成的对象文件
+*.o
+*.ko
+*.obj
+*.slo
+*.lo
+
+# 预编译头文件
+*.gch
+*.pch
+
+# 库文件（但保留第三方库的库文件）
+*.a
+*.lib
+*.dll
+*.dylib
+*.so
+*.la
+*.lai
+!third_party/**/*.a
+!third_party/**/*.so
+!third_party/**/*.dll
+!third_party/**/*.lib
+
+# 可执行文件（无扩展名和常见扩展名）
+*.exe
+*.out
+*.app
+
+# 依赖文件
+*.d
+
+# IDE和编辑器临时文件
+.vs/
+.vscode/
+.idea/
+.trae/
+.zcode/
+*.suo
+*.user
+*.sdf
+*.opensdf
+
+# 其他生成文件
+*.mod
+*.smod
+
+# 日志文件
+*.log
+*.tlog
+
+# 确保不忽略README.md和源文件
+!README.md
+!*.cpp
+!*.h
+!*.hpp
+!*.c
+!*.cc
+!*.cxx
+!*.hh
+!*.hxx
+!CMakeLists.txt
+
+# Python
+scripts/__pycache__/
+scripts/output/
+__pycache__/
+
+# 本地运行数据和生成的推理模型
+data/
+scripts/yolo/*.engine
+scripts/yolo/*.onnx
+!scripts/yolo/best_20260715.engine
